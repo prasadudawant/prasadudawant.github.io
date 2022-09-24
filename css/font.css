@@ -18,3 +18,8 @@ body {
 .default-font, #default-font {
     font-family: "Roboto", sans-serif;
 }
+
+.about-me-content {
+    font-family: 'Alata', sans-serif !important;
+    font-weight: 400;
+}

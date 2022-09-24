@@ -9,17 +9,20 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload"
-      as="style"
-      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
->
+<link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
 <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      media="print" onload="this.media='all'" />
+    href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    media="print" onload="this.media='all'" />
 <noscript>
-  <link
-          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-          rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</noscript>
+<noscript>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
 </noscript>
 
 
@@ -60,28 +63,150 @@ if (!doNotTrack) {
 
 <style>
     :root {
-        --text-color: #343a40;
-        --text-secondary-color: #6c757d;
-        --background-color: #eaedf0;
-        --secondary-background-color: #64ffda1a;
-        --primary-color: #007bff;
-        --secondary-color: #f8f9fa;
+        --text-color: {
+                {
+                .Site.Params.color.textColor | default "#343a40"
+            }
+        }
+
+        ;
+
+        --text-secondary-color: {
+                {
+                .Site.Params.color.secondaryTextColor | default "#6c757d"
+            }
+        }
+
+        ;
+
+        --background-color: {
+                {
+                .Site.Params.color.backgroundColor | default "#eaedf0"
+            }
+        }
+
+        ;
+
+        --secondary-background-color: {
+                {
+                .Site.Params.color.secondaryBackgroundColor | default "#64ffda1a"
+            }
+        }
+
+        ;
+
+        --primary-color: {
+                {
+                .Site.Params.color.primaryColor | default "#007bff"
+            }
+        }
+
+        ;
+
+        --secondary-color: {
+                {
+                .Site.Params.color.secondaryColor | default "#f8f9fa"
+            }
+        }
+
+        ;
 
          
-        --text-color-dark: #e4e6eb;
-        --text-secondary-color-dark: #b0b3b8;
-        --background-color-dark: #18191a;
-        --secondary-background-color-dark: #212529;
-        --primary-color-dark: #ffffff;
-        --secondary-color-dark: #212529;
+        --text-color-dark: {
+                {
+                .Site.Params.color.darkmode.textColor | default "#e4e6eb"
+            }
+        }
+
+        ;
+
+        --text-secondary-color-dark: {
+                {
+                .Site.Params.color.darkmode.secondaryTextColor | default "#b0b3b8"
+            }
+        }
+
+        ;
+
+        --background-color-dark: {
+                {
+                .Site.Params.color.darkmode.backgroundColor | default "#18191a"
+            }
+        }
+
+        ;
+
+        --secondary-background-color-dark: {
+                {
+                .Site.Params.color.darkmode.secondaryBackgroundColor | default "#212529"
+            }
+        }
+
+        ;
+
+        --primary-color-dark: {
+                {
+                .Site.Params.color.darkmode.primaryColor | default "#ffffff"
+            }
+        }
+
+        ;
+
+        --secondary-color-dark: {
+                {
+                .Site.Params.color.darkmode.secondaryColor | default "#212529"
+            }
+        }
+
+        ;
     }
+
     body {
-        font-size: 1rem;
-        font-weight: 400;
-        line-height: 1.5;
-        text-align: left;
+        font-size: {
+                {
+                .Site.Params.font.fontSize | default "1rem"
+            }
+        }
+
+        ;
+
+        font-weight: {
+                {
+                .Site.Params.font.fontWeight | default "400"
+            }
+        }
+
+        ;
+
+        line-height: {
+                {
+                .Site.Params.font.lineHeight | default "1.5"
+            }
+        }
+
+        ;
+
+        text-align: {
+                {
+                .Site.Params.font.textAlign | default "left"
+            }
+        }
+
+        ;
     }
 </style>
+
+
+<script>
+    (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-TRS9V2L');
+</script>
 
 <meta name="description" content="Categories of Prasad Udawant Portfolio">
 <link rel="stylesheet" href="/css/list.css" media="all">
